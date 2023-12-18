@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CUSTOM_CounterChecker : MonoBehaviour
+public class UP_CounterChecker : MonoBehaviour
 {
     [SerializeField] UP_Counter counter = null;
 
