@@ -18,6 +18,11 @@ public class UP_MovementAnimator : MonoBehaviour
     public bool flipImageWhenGoingLeft;
     public bool flipImageWhenGoingDown;
 
+    public string rightKey;
+    public string leftKey;
+    public string jumpKey;
+    public string crouchKey;
+
 
     void Update()
     {
@@ -50,5 +55,15 @@ public class UP_MovementAnimator : MonoBehaviour
             if(rb2D.velocity.y < 0)         {spriteRenderer.flipY = true;}
             else if(rb2D.velocity.y > 0)    {spriteRenderer.flipY = false;}
         }
+
+        if(Input.GetKey(rightKey))      {animator.SetBool("PressingKey", true);}
+        else if(Input.GetKey(leftKey)) {animator.SetBool("PressingKey", true);}
+        else                                {animator.SetBool("PressingKey", false);}
+
+        if(Input.GetKey(jumpKey)) {animator.SetBool("PressingJump", true);}
+        else                      {animator.SetBool("PressingJump", false);}
+
+        if(Input.GetKey(crouchKey)) {animator.SetBool("PressingCrouch", true);}
+        else                        {animator.SetBool("PressingCrouch", false);}
     }
 }
