@@ -60,8 +60,8 @@ public class UP_MovementAnimator : MonoBehaviour
         else if(Input.GetKey(leftKey)) {animator.SetBool("PressingKey", true);}
         else                                {animator.SetBool("PressingKey", false);}
 
-        if(Input.GetKey(jumpKey)) {animator.SetBool("PressingJump", true);}
-        else                      {animator.SetBool("PressingJump", false);}
+        if(Input.GetKeyDown(jumpKey)) {animator.SetBool("JumpPressed", true);}
+        else                      {animator.SetBool("JumpPressed", false);}
 
         if(Input.GetKey(crouchKey)) {animator.SetBool("PressingCrouch", true);}
         else                        {animator.SetBool("PressingCrouch", false);}
