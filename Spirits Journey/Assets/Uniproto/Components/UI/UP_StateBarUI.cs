@@ -15,7 +15,7 @@ public class UP_StateBarUI : MonoBehaviour
 
     void Update()
     {
-        if (counter.Counter <= sprites.Length)
+        if (counter.Counter <= sprites.Length && counter.Counter >= 0)
         {
             int value = counter.Counter;
             barImage.sprite = sprites[value];
