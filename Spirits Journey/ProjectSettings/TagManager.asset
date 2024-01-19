@@ -9,6 +9,8 @@ TagManager:
   - FloorDetector
   - Ground
   - PlayerDamge
+  - Coin
+  - Heal
   layers:
   - Default
   - TransparentFX
