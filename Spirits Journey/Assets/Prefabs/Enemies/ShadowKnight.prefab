@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 276609403684825975}
   - component: {fileID: 15097492233372020}
   - component: {fileID: 7569497223887532929}
+  - component: {fileID: 3244789163786692192}
   m_Layer: 6
   m_Name: ShadowKnight
   m_TagString: Enemy
@@ -249,7 +250,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -285,6 +286,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlesPrefab: {fileID: 1135179773538432, guid: 15f08c7bb3105a74aad7b58203b7ca15, type: 3}
+--- !u!95 &3244789163786692192
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994850424884304469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a9fddc6b9633e34d981dc2ec6c3da42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7754940478853669665
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +319,8 @@ GameObject:
   - component: {fileID: 1679828514742684929}
   - component: {fileID: 4732102751810953922}
   - component: {fileID: 7091206000096897088}
+  - component: {fileID: 4468112304339495452}
+  - component: {fileID: 3410888075255853773}
   m_Layer: 6
   m_Name: AI
   m_TagString: Untagged
@@ -433,3 +457,55 @@ MonoBehaviour:
     onMessageReceived:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &4468112304339495452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754940478853669665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c600c915ad4ffd45865025b1137da3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2D: {fileID: 8284201451236783002}
+  animator: {fileID: 3244789163786692192}
+  spriteRenderer: {fileID: 10259938815956927}
+  velocity: 0
+  inGroundCounter: {fileID: 3410888075255853773}
+  inGroundInverted: 0
+  flipImageWhenGoingLeft: 1
+  flipImageWhenGoingDown: 0
+  rightKey: d
+  leftKey: a
+  jumpKey: space
+  crouchKey: s
+--- !u!114 &3410888075255853773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754940478853669665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2102c0a2b2dd2c449a04fa63c24c7986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 1
+  multiplier: 1
+  useMaximum: 0
+  maximum: 10
+  useMinimum: 0
+  minimum: 0
+  alertIfReachesValue: 0
+  randomizeTargetValue: 0
+  targetValue: 0
+  randomTargetValue:
+    min: 0
+    max: 10
+  comparison: 1
+  onValueReached:
+    m_PersistentCalls:
+      m_Calls: []
