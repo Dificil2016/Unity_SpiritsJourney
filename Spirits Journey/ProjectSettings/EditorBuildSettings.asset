@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: b388253f1ce7c0541aed7a95c885a852
   - enabled: 1
+    path: Assets/Scenes/OPTIONS.unity
+    guid: c4fd2a698378fdb4a81b5153c3905eb1
+  - enabled: 0
     path: Assets/Scenes/Dexter_Room.unity
     guid: ace9b75b0bb37054a87aea469075cdea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sample.unity
-    guid: 6712bc66c3dd29444984e33e827462df
+    guid: 0c985328d9d2ffa4ca5b0ab4aa4ff53d
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 30e97986efb69e74bb22f7e9ae8b82ab
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: c3cdfdeabdbf7644b902fa19ee95088c
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: d5fdb97ce5121eb409c80966fea79d89
   m_configObjects: {}
